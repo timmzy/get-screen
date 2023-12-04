@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Client dimension of this device is:
+<table border="1">
+    <thead>
+    <tr>
+        <th>Variable</th>
+        <th>Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Width
+        </td>
+        <td id="width">7557</td>
+    </tr>
+    <tr>
+        <td>
+            Height
+        </td>
+        <td id="height">7557</td>
+    </tr>
+    </tbody>
+</table>
+Device dimension of this device is:
+<table border="1">
+    <thead>
+    <tr>
+        <th>Variable</th>
+        <th>Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Width
+        </td>
+        <td id="mWidth">7557</td>
+    </tr>
+    <tr>
+        <td>
+            Height
+        </td>
+        <td id="mHeight">7557</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    var he = window.screen.height;
+    var wi = window.screen.width;
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    var height = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+    document.getElementById("width").innerText = `${width}px`;
+    document.getElementById("height").innerText = `${height}px`
+    document.getElementById("mWidth").innerText = `${wi}px`;
+    document.getElementById("mHeight").innerText = `${he}px`
+</script>
+</body>
+</html>
